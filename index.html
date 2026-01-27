@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Online - Download</title>
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔢</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .logo {
+            font-size: 80px;
+            margin-bottom: 10px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .tagline {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #555;
+            font-size: 14px;
+        }
+        
+        .feature-icon {
+            font-size: 18px;
+        }
+        
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            margin-bottom: 20px;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+        }
+        
+        .download-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .version {
+            color: #999;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #ddd, transparent);
+            margin: 25px 0;
+        }
+        
+        .screenshots {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 25px;
+            overflow-x: auto;
+            padding: 10px 0;
+        }
+        
+        .screenshot {
+            width: 80px;
+            height: 160px;
+            background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #888;
+        }
+        
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .links a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .links a:hover {
+            text-decoration: underline;
+        }
+        
+        .playstore-badge {
+            margin-top: 15px;
+        }
+        
+        .playstore-badge img {
+            height: 50px;
+        }
+        
+        .install-note {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 20px;
+            text-align: left;
+            font-size: 13px;
+            color: #856404;
+        }
+        
+        .install-note strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        footer {
+            margin-top: 30px;
+            color: rgba(255,255,255,0.7);
+            font-size: 13px;
+        }
+        
+        footer a {
+            color: rgba(255,255,255,0.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="logo">🔢</div>
+            <h1>Sudoku Online</h1>
+            <p class="tagline">Das ultimative Sudoku-Erlebnis</p>
+            
+            <div class="features">
+                <div class="feature">
+                    <span class="feature-icon">🎮</span>
+                    <span>4 Spielmodi</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">👥</span>
+                    <span>Multiplayer</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🏆</span>
+                    <span>Ranglisten</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🎨</span>
+                    <span>Themes</span>
+                </div>
+            </div>
+            
+            <a href="sudoku-online.apk" class="download-btn" id="downloadBtn">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.67v6h4V9h3.67L12 2z"/>
+                </svg>
+                APK Herunterladen
+            </a>
+            
+            <p class="version">Version 1.4.0 • 10 MB • Android 8.0+</p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value">4</div>
+                    <div class="stat-label">Spielmodi</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">7</div>
+                    <div class="stat-label">Ligen</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">50+</div>
+                    <div class="stat-label">Erfolge</div>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <h3 style="margin-bottom: 15px; color: #333;">Features</h3>
+            <div style="text-align: left; color: #555; font-size: 14px; line-height: 1.8;">
+                ✓ Klassisches Sudoku & Killer Sudoku<br>
+                ✓ TicTacToe & Mühle<br>
+                ✓ Online Multiplayer mit Freunden<br>
+                ✓ Freunde-System mit Challenges<br>
+                ✓ Liga-System mit 7 Rängen<br>
+                ✓ Tägliche Herausforderungen<br>
+                ✓ Coins & Theme-Shop<br>
+                ✓ Statistiken & Erfolge
+            </div>
+            
+            <div class="install-note">
+                <strong>📱 Installation:</strong>
+                1. APK herunterladen<br>
+                2. "Installation aus unbekannten Quellen" erlauben<br>
+                3. APK öffnen und installieren
+            </div>
+            
+            <div class="links">
+                <a href="privacy.html">Datenschutz</a>
+                <a href="mailto:sudokuonline.app@gmail.com">Kontakt</a>
+            </div>
+        </div>
+        
+        <footer>
+            &copy; 2025 Sudoku Online<br>
+            <a href="privacy.html">Datenschutzerklärung</a>
+        </footer>
+    </div>
+    
+    <script>
+        // Track download clicks
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            console.log('Download started');
+        });
+    </script>
+</body>
+</html>
