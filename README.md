@@ -1,17 +1,14 @@
-# 🧩 Sudoku Online Downloader
+# Sudoku Online Downloader - Free Browser Sudoku Game
 
-<div align="center">
+[![GitHub stars](https://img.shields.io/github/stars/OutBlade/sudoku-online-download?style=social)](https://github.com/OutBlade/sudoku-online-download/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/OutBlade/sudoku-online-download?style=social)](https://github.com/OutBlade/sudoku-online-download/network)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-![JavaScript](https://img.shields.io/badge/JavaScript-yellow.svg)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26.svg)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Stars](https://img.shields.io/github/stars/OutBlade/sudoku-online-download?style=social)
-![Forks](https://img.shields.io/github/forks/OutBlade/sudoku-online-download?style=social)
+**Play Sudoku online with unlimited puzzles.** Web-based Sudoku game with online puzzle download, real-time validation, and clean ad-free experience. No installation required - play instantly in your browser.
 
-[🎮 Play Online](#live-demo) • [📖 Documentation](#documentation) • [🛠️ Installation](#installation) • [💡 Usage](#usage) • [🤝 Contributing](#contributing)
+**GitHub Topics:** `sudoku` `puzzle-game` `javascript` `browser-game` `html5` `logic-puzzle` `web-game` `number-puzzle`
 
-</div>
+[Play Online](#live-demo) • [Documentation](#documentation) • [Installation](#installation) • [Usage](#usage) • [Contributing](#contributing)
 
 ---
 
